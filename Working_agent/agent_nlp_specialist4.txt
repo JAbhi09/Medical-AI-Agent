@@ -1,0 +1,22 @@
+                                                                                                                                                                   │
+│  Medical Entity Extraction Results:                                                                                                                                              │
+│                                                                                                                                                                                  │
+│  DISEASES IDENTIFIED:                                                                                                                                                            │
+│  - diabetes (confidence: 0.85)                                                                                                                                                   │
+│                                                                                                                                                                                  │
+│  SYMPTOMS IDENTIFIED:                                                                                                                                                            │
+│  - the patient, a 54 - year - old male, presents with persistent fatigue, occasional dizziness, and (confidence: 0.52)                                                           │
+│                                                                                                                                                                                  │
+│  MEDICATIONS IDENTIFIED:                                                                                                                                                         │
+│  - ##ness of breath for the past two weeks. he has a history of coronary artery disease and type 2 diabetes. current medications include metformin 500 (confidence: 0.53)        │
+│  - ##vastatin 20 mg once daily, and aspirin 81 (confidence: 0.52)                                                                                                                │
+│  - Metformin 500 mg (confidence: 0.72)                                                                                                                                           │
+│  - Atorvastatin 20 mg (confidence: 0.72)                                                                                                                                         │
+│  - Aspirin 81 mg (confidence: 0.72)                                                                                                                                              │
+│  - Metformin (confidence: 0.85)                                                                                                                                                  │
+│  - Atorvastatin (confidence: 0.85)                                                                                                                                               │
+│  - Aspirin (confidence: 0.85)                                                                                                                                                    │
+│                                                                                                                                                                                  │
+│  Total entities extracted: 14                                                                                                                                                    │
+│  Processing time: 25.03ms                                                                                                                                                        │
+│                                                                                                                                                                                  │

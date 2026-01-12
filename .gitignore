@@ -1,0 +1,48 @@
+# Environment variables
+.env
+*.env
+
+# Virtual environment
+medical_ai_env/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+logs/
+*.log
+
+# Database
+database/
+*.db
+*.sqlite3
+medical_ner_cache.db
+
+# ChromaDB
+chroma_pubmed_db/
+
+# Data files
+data/
+models/
+
+# Debug/temporary files
+debug_stdout.txt
+cleaned_crew_output.txt
+project_structure.txt
+test_results.json
+
+# OS files
+.DS_Store
+Thumbs.db

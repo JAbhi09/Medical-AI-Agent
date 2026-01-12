@@ -1,0 +1,10 @@
+                                                                                                                                                                   │
+│  Medical Entity Extraction Results:                                                                                                                                              │
+│                                                                                                                                                                                  │
+│  SYMPTOMS IDENTIFIED:                                                                                                                                                            │
+│  - year - old male with chest pain and shortness of breath (confidence: 0.47)                                                                                                    │
+│  - pain (confidence: 0.81)                                                                                                                                                       │
+│                                                                                                                                                                                  │
+│  Total entities extracted: 2                                                                                                                                                     │
+│  Processing time: 66.32ms                                                                                                                                                        │
+│                                                                                                                                                                                  │

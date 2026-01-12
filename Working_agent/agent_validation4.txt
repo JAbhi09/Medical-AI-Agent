@@ -1,0 +1,89 @@
+                                                                                                                                                                   │
+│  ```json                                                                                                                                                                         │
+│  {                                                                                                                                                                               │
+│    "validationReport": {                                                                                                                                                         │
+│      "diseases": [                                                                                                                                                               │
+│        {                                                                                                                                                                         │
+│          "entity": "diabetes",                                                                                                                                                   │
+│          "confidence": 0.85,                                                                                                                                                     │
+│          "accuracy": "Accurate. Type 2 diabetes is a known condition for the patient.",                                                                                          │
+│          "concerns": "None."                                                                                                                                                     │
+│        }                                                                                                                                                                         │
+│      ],                                                                                                                                                                          │
+│      "symptoms": [                                                                                                                                                               │
+│        {                                                                                                                                                                         │
+│          "entity": "the patient, a 54 - year - old male, presents with persistent fatigue, occasional dizziness, and (confidence: 0.52)",                                        │
+│          "confidence": 0.52,                                                                                                                                                     │
+│          "accuracy": "Potentially Inaccurate. The complete symptom should be 'persistent fatigue, occasional dizziness, and shortness of breath'.",                              │
+│          "concerns": "Incomplete symptom description. Low confidence score suggests parsing issues."                                                                             │
+│        }                                                                                                                                                                         │
+│      ],                                                                                                                                                                          │
+│      "medications": [                                                                                                                                                            │
+│        {                                                                                                                                                                         │
+│          "entity": "##ness of breath for the past two weeks. he has a history of coronary artery disease and type 2 diabetes. current medications include metformin 500          │
+│  (confidence: 0.53)",                                                                                                                                                            │
+│          "confidence": 0.53,                                                                                                                                                     │
+│          "accuracy": "Inaccurate. This is not a medication. It's part of the patient's presentation and medication list introduction.",                                          │
+│          "concerns": "Misidentified as a medication. Very low confidence score confirms parsing error."                                                                          │
+│        },                                                                                                                                                                        │
+│        {                                                                                                                                                                         │
+│          "entity": "##vastatin 20 mg once daily, and aspirin 81 (confidence: 0.52)",                                                                                             │
+│          "confidence": 0.52,                                                                                                                                                     │
+│          "accuracy": "Inaccurate. This appears to be a partial string. The actual Medications are Atorvastatin 20mg and Aspirin 81mg",                                           │
+│          "concerns": "Misidentified as a medication. Very low confidence score confirms parsing error."                                                                          │
+│        },                                                                                                                                                                        │
+│        {                                                                                                                                                                         │
+│          "entity": "Metformin 500 mg",                                                                                                                                           │
+│          "confidence": 0.72,                                                                                                                                                     │
+│          "accuracy": "Likely Accurate. Metformin is listed as a current medication. Dosage needs to be verified (frequency).",                                                   │
+│          "concerns": "Dosage frequency (e.g., once daily, twice daily) is missing."                                                                                              │
+│        },                                                                                                                                                                        │
+│        {                                                                                                                                                                         │
+│          "entity": "Atorvastatin 20 mg",                                                                                                                                         │
+│          "confidence": 0.72,                                                                                                                                                     │
+│          "accuracy": "Accurate. Atorvastatin is listed as a current medication.",                                                                                                │
+│          "concerns": "None."                                                                                                                                                     │
+│        },                                                                                                                                                                        │
+│        {                                                                                                                                                                         │
+│          "entity": "Aspirin 81 mg",                                                                                                                                              │
+│          "confidence": 0.72,                                                                                                                                                     │
+│          "accuracy": "Accurate. Aspirin is listed as a current medication.",                                                                                                     │
+│          "concerns": "None."                                                                                                                                                     │
+│        },                                                                                                                                                                        │
+│        {                                                                                                                                                                         │
+│          "entity": "Metformin",                                                                                                                                                  │
+│          "confidence": 0.85,                                                                                                                                                     │
+│          "accuracy": "Accurate. Metformin is listed as a current medication.",                                                                                                   │
+│          "concerns": "This is a general reference; specific dosage is more useful."                                                                                              │
+│        },                                                                                                                                                                        │
+│        {                                                                                                                                                                         │
+│          "entity": "Atorvastatin",                                                                                                                                               │
+│          "confidence": 0.85,                                                                                                                                                     │
+│          "accuracy": "Accurate. Atorvastatin is listed as a current medication.",                                                                                                │
+│          "concerns": "This is a general reference; specific dosage is more useful."                                                                                              │
+│        },                                                                                                                                                                        │
+│        {                                                                                                                                                                         │
+│          "entity": "Aspirin",                                                                                                                                                    │
+│          "confidence": 0.85,                                                                                                                                                     │
+│          "accuracy": "Accurate. Aspirin is listed as a current medication.",                                                                                                     │
+│          "concerns": "This is a general reference; specific dosage is more useful."                                                                                              │
+│        }                                                                                                                                                                         │
+│      ],                                                                                                                                                                          │
+│      "overallAssessment": {                                                                                                                                                      │
+│        "accuracy": "The extraction process has some inaccuracies, particularly in identifying the symptoms and medications. There are parsing errors and incomplete              │
+│  extractions.",                                                                                                                                                                  │
+│        "completeness": "The extraction is incomplete. The symptom 'shortness of breath' is missed. Metformin dosage frequency is not extracted.",                                │
+│        "recommendations": [                                                                                                                                                      │
+│          "Improve parsing logic to accurately extract complete symptoms and medications.",                                                                                       │
+│          "Implement a mechanism to identify and extract medication dosages and frequencies.",                                                                                    │
+│          "Increase the confidence threshold for entity recognition to reduce false positives."                                                                                   │
+│        ]                                                                                                                                                                         │
+│      },                                                                                                                                                                          │
+│      "entitiesReviewed": 4,                                                                                                                                                      │
+│       "summary": "The NLP agent demonstrates moderate accuracy in extracting medical entities. Key areas for improvement include enhancing parsing accuracy for symptoms and     │
+│  medications, and ensuring complete information extraction, particularly dosage and frequency for medications. The presence of parsing errors that resulted in the               │
+│  misidentification of entities as medications requires immediate attention."                                                                                                     │
+│    }                                                                                                                                                                             │
+│  }                                                                                                                                                                               │
+│  ```                                                                                                                                                                             │
+│                                                                                                                                                                                  │

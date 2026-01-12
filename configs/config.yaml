@@ -1,0 +1,37 @@
+# MVP Configuration - Keep It Simple
+
+system:
+  name: "Medical AI MVP"
+  version: "0.1.0"
+  mode: "development"
+
+agents:
+  # Basic agent configuration
+  clinical_reasoning:
+    model: "llama2-7b"
+    temperature: 0.3
+    max_tokens: 512
+
+  medical_nlp:
+    model: "biobert"
+    batch_size: 1
+
+  drug_interaction:
+    database: "basic_drug_db"
+    cache_enabled: false
+
+  knowledge_validation:
+    confidence_threshold: 0.7
+
+  patient_education:
+    template_path: "./data/templates"
+
+pipeline:
+  max_processing_time: 10  # seconds
+  enable_caching: false  # Add later
+  parallel_processing: false  # Sequential for MVP
+
+safety:
+  require_human_validation: true
+  log_all_decisions: true
+  block_high_risk: true
