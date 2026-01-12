@@ -138,7 +138,6 @@ With RAG:    "Based on your institution's antibiogram showing 23%
 #### 2. **Evidence-Based Decision Support**
 
 Every recommendation includes:
-- 📚 **Source Citations**: Links to specific guidelines
 - 📊 **Evidence Quality**: GRADE ratings (High/Moderate/Low)
 - 🏥 **Local Data**: Your institution's outcomes data
 - 📈 **Success Rates**: Historical performance of recommendations
@@ -267,8 +266,7 @@ Time to actionable recommendations: 8 seconds
 ```
 
 **Clinical Impact:**
-- ⚡ Faster decision-making: 25 min → 8 sec for initial triage
-- 📊 Evidence-based: Every step cited to current guidelines
+- ⚡ Faster decision-making: 25 min → 2 min for initial triage
 - 🎯 Personalized: Incorporates patient's specific history
 - 🔒 Safer: Zero critical steps missed
 
@@ -564,7 +562,7 @@ Total: 5 minutes, $0
 ┌─────────────────────┐              ┌─────────────────────┐
 │  VECTOR STORAGE     │              │  KNOWLEDGE BASES    │
 │  (ChromaDB)         │              │  • UMLS API         │
-│                     │              │  • SNOMED CT        │
+│                     │              │  • Patient databases│
 │  • Medical docs     │◄─────────────┤  • Drug databases   │
 │  • Guidelines       │  Semantic    │  • Clinical trials  │
 │  • Case histories   │  Search      │  • Protocols        │
@@ -676,7 +674,7 @@ Structured, cited, actionable recommendations
 ### Installation
 ```bash
 # 1. Clone repository
-git clone https://github.com/yourusername/medical-ai-cdss.git
+git clone https://github.com/JAbhi09/medical-ai-cdss.git
 cd medical-ai-cdss
 
 # 2. Create virtual environment
@@ -790,8 +788,6 @@ System Response Time:
 | Metric | Target | Achieved | Status |
 |--------|--------|----------|---------|
 | Diagnostic Accuracy (Top-3) | >85% | 86.8% | ✅ |
-| Alert Relevance | >80% | 83.2% | ✅ |
-| Guideline Compliance | >90% | 92.4% | ✅ |
 | Critical Error Rate | <1% | 0.8% | ✅ |
 | Clinician Satisfaction | >4.0/5 | 4.3/5 | ✅ |
 | Time Savings | >60% | 67% | ✅ |
@@ -836,12 +832,6 @@ Generates:
 - Alternative medication suggestions
 - Patient monitoring plan
 - Insurance coverage information
-
-Alert Types:
-🔴 Critical: Contraindicated (auto-blocks order)
-🟡 Major: Requires acknowledgment and documentation
-🟢 Minor: Informational only
-```
 
 ### Use Case 3: Clinical Education & Training
 **Scenario**: Medical student preparing for rounds
@@ -943,38 +933,8 @@ AI Recommendation → Clinician Review → Patient Discussion → Shared Decisio
 - N=500 cases per institution
 - Primary endpoint: Non-inferiority to standard care
 
-## 📈 Roadmap
 
-### ✅ Completed (MVP Phase 1)
-- [x] Multi-agent CrewAI orchestration
-- [x] BioBERT medical NER pipeline (85%+ accuracy)
-- [x] UMLS/SNOMED CT integration
-- [x] Basic ChromaDB vector storage
-- [x] Gemini API integration with LLaMA fallback
-- [x] Streamlit clinical interface
-- [x] Core safety validation framework
-- [x] Drug interaction checking
-- [x] Differential diagnosis generation
-
-### 🔄 In Progress (Phase 2 - Q1 2025)
-- [ ] Comprehensive evaluation metrics
-- [ ] User acceptance testing with clinicians
-- [ ] Performance optimization (caching, async processing)
-- [ ] Advanced confidence scoring algorithms
-- [ ] Multi-institution knowledge base support
-- [ ] Enhanced explainability features
-
-### 📋 Planned (Phase 3 - Q2-Q3 2025)
-- [ ] Real-time clinical guideline updates
-- [ ] Integration with EHR systems (HL7 FHIR)
-- [ ] Advanced multi-modal support (imaging, lab trends)
-- [ ] Predictive analytics (readmission risk, complications)
-- [ ] Mobile application for point-of-care use
-- [ ] Telemedicine integration
-- [ ] Clinical trial matching
-- [ ] Genomic data integration
-
-### 🔮 Future Considerations (Phase 4+)
+### 🔮 Future Considerations
 - [ ] FDA 510(k) submission preparation
 - [ ] HIPAA compliance certification
 - [ ] Multi-language support
@@ -983,29 +943,6 @@ AI Recommendation → Clinician Review → Patient Discussion → Shared Decisio
 - [ ] Population health analytics
 - [ ] Clinical research automation
 - [ ] Continuous learning from clinical outcomes
-
-## 🤝 Contributing
-
-We welcome contributions from:
-- 🩺 **Clinicians**: Clinical validation, use case feedback, safety testing
-- 💻 **Developers**: Code contributions, bug fixes, performance optimization
-- 📊 **Data Scientists**: Model improvements, evaluation metrics
-- 📚 **Medical Informaticists**: Knowledge base curation, terminology mapping
-- 🎓 **Researchers**: Clinical studies, outcome measurement
-
-### Contribution Guidelines
-- **Clinical Changes**: Must be evidence-based with citations
-- **Safety Critical**: Requires review by medical professional
-- **Code Quality**: Must pass linting and type checking
-- **Testing**: Minimum 80% code coverage
-- **Documentation**: Update relevant docs and examples
-
-**Important Disclaimers**:
-- ⚠️  Not FDA-cleared for clinical use
-- ⚠️  Research and educational purposes only
-- ⚠️  All outputs require physician validation
-- ⚠️  Not a substitute for clinical judgment
-- ⚠️  Designed to augment, not replace, healthcare professionals
 
 ## 🙏 Acknowledgments
 
@@ -1022,8 +959,6 @@ We welcome contributions from:
 - **Chroma**: Vector database for semantic search
 - **Streamlit**: Clinical user interface
 - **Meta**: LLaMA 2 for local inference
-
-
 ---
 
 ## ⭐ Star History
@@ -1049,8 +984,9 @@ If you use this system in your research, please cite:
 
 ---
 
-**Last Updated**: January 2025  
+**Last Updated**: September 2025  
 **Version**: 0.9.0-MVP  
 **Status**: Active Development - Not for Clinical Use
+
 
 
