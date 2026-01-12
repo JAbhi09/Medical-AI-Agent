@@ -1,7 +1,7 @@
 # Medical AI Clinical Decision Support System (CDSS)
 
 ### Main Clinical Interface
-![Main Interface](images/Screenshot 2026-01-11 222005.png)
+![Main Interface](images/Screenshot.png)
 
 > An intelligent multi-agent Clinical Decision Support System leveraging RAG (Retrieval-Augmented Generation) architecture to assist healthcare professionals with complex clinical cases through evidence-based, explainable AI recommendations.
 
@@ -1052,4 +1052,5 @@ If you use this system in your research, please cite:
 **Last Updated**: January 2025  
 **Version**: 0.9.0-MVP  
 **Status**: Active Development - Not for Clinical Use
+
 
